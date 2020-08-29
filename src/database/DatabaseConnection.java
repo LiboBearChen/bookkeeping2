@@ -13,7 +13,7 @@ import java.sql.DriverManager;
  * @author Libo
  *
  */
-public class DatabaseConnection
+/*public class DatabaseConnection
 {
 	private static Connection getConnection()
 	{
@@ -82,5 +82,5 @@ public class Driver
 
 	}
 
-}
+}*/
 
