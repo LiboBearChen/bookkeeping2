@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.control.*?>
@@ -15,7 +16,7 @@
    <children>
       <VBox prefHeight="488.0" prefWidth="151.0" style="-fx-background-color: #bfff00;">
          <children>
-            <ImageView fitHeight="84.0" fitWidth="152.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="88.0" fitWidth="152.0" pickOnBounds="true" preserveRatio="true" />
             <Button alignment="BASELINE_LEFT" graphicTextGap="25.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="181.0" style="-fx-background-color: #80ff00;" text="Overview">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
@@ -54,5 +55,84 @@
             </Button>
          </children>
       </VBox>
+      <Label layoutX="187.0" layoutY="31.0" prefHeight="65.0" prefWidth="179.0" style="-fx-background-color: #fff;" text="Orders" wrapText="true">
+         <font>
+            <Font size="43.0" />
+         </font>
+      </Label>
+      <HBox layoutX="187.0" layoutY="184.0" prefHeight="30.0" prefWidth="532.0">
+         <children>
+            <Label prefHeight="31.0" prefWidth="85.0" text="Company">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </Label>
+            <Label prefHeight="31.0" prefWidth="85.0" text="Order ID">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </Label>
+            <Label prefHeight="31.0" prefWidth="85.0" text="Items">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </Label>
+            <Label prefHeight="31.0" prefWidth="85.0" text="Price">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </Label>
+            <Label prefHeight="31.0" prefWidth="85.0" text="Date">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="178.0" layoutY="96.0" prefHeight="81.0" prefWidth="532.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="78.0" text="8888" textFill="#139abf">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="78.0" text="Total Orders" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="78.0" text="8888" textFill="#b2bd13">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="78.0" text="Total Orders" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="78.0" text="8888" textFill="#b613bd">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="78.0" text="Total Orders" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="78.0" text="8888" textFill="#4813bd">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="78.0" text="Total Orders" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <VBox fx:id="pnItems" layoutX="187.0" layoutY="231.0" prefHeight="200.0" prefWidth="532.0" />
    </children>
 </AnchorPane>
