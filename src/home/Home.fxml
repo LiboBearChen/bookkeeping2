@@ -59,32 +59,44 @@
             <Font size="43.0" />
          </font>
       </Label>
-      <HBox layoutX="187.0" layoutY="184.0" prefHeight="30.0" prefWidth="532.0">
+      <HBox alignment="CENTER" layoutX="187.0" layoutY="184.0" prefHeight="30.0" prefWidth="532.0">
          <children>
-            <Label prefHeight="31.0" prefWidth="85.0" text="Company">
+            <Label alignment="CENTER" prefHeight="31.0" prefWidth="85.0" text="Company">
                <HBox.margin>
                   <Insets left="15.0" />
                </HBox.margin>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
             </Label>
-            <Label prefHeight="31.0" prefWidth="85.0" text="Order ID">
+            <Label alignment="CENTER" prefHeight="31.0" prefWidth="85.0" text="Order ID">
                <HBox.margin>
                   <Insets left="15.0" />
                </HBox.margin>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
             </Label>
-            <Label prefHeight="31.0" prefWidth="85.0" text="Items">
+            <Label alignment="CENTER" prefHeight="31.0" prefWidth="85.0" text="Price">
                <HBox.margin>
                   <Insets left="15.0" />
                </HBox.margin>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
             </Label>
-            <Label prefHeight="31.0" prefWidth="85.0" text="Price">
+            <Label alignment="CENTER" prefHeight="31.0" prefWidth="85.0" text="Date">
                <HBox.margin>
                   <Insets left="15.0" />
                </HBox.margin>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
             </Label>
-            <Label prefHeight="31.0" prefWidth="85.0" text="Date">
-               <HBox.margin>
-                  <Insets left="15.0" />
-               </HBox.margin>
+            <Label alignment="CENTER" prefHeight="31.0" prefWidth="85.0">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
             </Label>
          </children>
       </HBox>
