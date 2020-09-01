@@ -11,7 +11,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="488.0" prefWidth="745.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="488.0" prefWidth="745.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.Controller">
    <children>
       <VBox prefHeight="488.0" prefWidth="151.0" style="-fx-background-color: #bfff00;">
          <children>
@@ -144,6 +144,10 @@
             </VBox>
          </children>
       </HBox>
-      <VBox fx:id="pnItems" layoutX="187.0" layoutY="231.0" prefHeight="200.0" prefWidth="532.0" />
+      <ScrollPane layoutX="188.0" layoutY="224.0" prefHeight="250.0" prefWidth="553.0">
+         <content>
+            <VBox fx:id="pnItems" prefHeight="250.0" prefWidth="535.0" />
+         </content>
+      </ScrollPane>
    </children>
 </AnchorPane>
