@@ -3,5 +3,9 @@
 }
 
 .button:hover{
+    -fx-background-color:#BDBBC3;
+}
+
+.button:pressed{
     -fx-background-color:#EBE8F9;
 }
