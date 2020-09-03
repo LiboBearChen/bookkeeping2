@@ -1,4 +1,4 @@
-package home;
+package controllers;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -21,7 +21,7 @@ public class Controller implements Initializable {
         Node[] nodes=new Node[100];
         for(int i=0;i<nodes.length;i++){
             try {
-                nodes[i]=FXMLLoader.load(getClass().getResource("Item.fxml"));
+                nodes[i]=FXMLLoader.load(getClass().getResource("/Item.fxml"));
                 pnItems.getChildren().add(nodes[i]);
             } catch (IOException e) {
                 e.printStackTrace();
