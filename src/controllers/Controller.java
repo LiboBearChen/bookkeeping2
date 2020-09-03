@@ -6,7 +6,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.layout.VBox;
 
-import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -21,7 +20,7 @@ public class Controller implements Initializable {
         Node[] nodes=new Node[100];
         for(int i=0;i<nodes.length;i++){
             try {
-                nodes[i]=FXMLLoader.load(getClass().getResource("/Item.fxml"));
+                nodes[i]=FXMLLoader.load(getClass().getResource("/views/Item.fxml"));
                 pnItems.getChildren().add(nodes[i]);
             } catch (IOException e) {
                 e.printStackTrace();
