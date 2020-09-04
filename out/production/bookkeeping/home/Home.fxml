@@ -16,7 +16,7 @@
       <VBox prefHeight="488.0" prefWidth="151.0" style="-fx-background-color: #bfff00;">
          <children>
             <ImageView fitHeight="88.0" fitWidth="152.0" pickOnBounds="true" preserveRatio="true" />
-            <Button alignment="BASELINE_LEFT" graphicTextGap="25.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="181.0" stylesheets="@style.css" text="Overview">
+            <Button fx:id="btnOverview" alignment="BASELINE_LEFT" graphicTextGap="25.0" mnemonicParsing="false" onMouseClicked="#handleClicks" prefHeight="38.0" prefWidth="181.0" stylesheets="@style.css" text="Overview">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -28,7 +28,7 @@
                   <Insets left="20.0" />
                </padding>
             </Button>
-            <Button alignment="BASELINE_LEFT" graphicTextGap="25.0" mnemonicParsing="false" prefHeight="6.0" prefWidth="151.0" stylesheets="@style.css" text="Orders">
+            <Button fx:id="btnOrders" alignment="BASELINE_LEFT" graphicTextGap="25.0" mnemonicParsing="false" onMouseClicked="#handleClicks" prefHeight="6.0" prefWidth="151.0" stylesheets="@style.css" text="Orders">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -40,7 +40,7 @@
                   <Insets left="20.0" />
                </padding>
             </Button>
-            <Button alignment="BASELINE_LEFT" graphicTextGap="25.0" mnemonicParsing="false" prefHeight="6.0" prefWidth="151.0" stylesheets="@style.css" text="Customers">
+            <Button fx:id="btnCustomers" alignment="BASELINE_LEFT" graphicTextGap="25.0" mnemonicParsing="false" onMouseClicked="#handleClicks" prefHeight="6.0" prefWidth="151.0" stylesheets="@style.css" text="Customers">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -56,7 +56,7 @@
       </VBox>
       <StackPane layoutX="153.0" prefHeight="488.0" prefWidth="624.0">
          <children>
-            <Pane prefHeight="200.0" prefWidth="200.0">
+            <Pane fx:id="pnlOverview" prefHeight="200.0" prefWidth="200.0">
                <children>
                   <Label layoutX="46.0" layoutY="14.0" prefHeight="65.0" prefWidth="179.0" style="-fx-background-color: #fff;" text="Orders" wrapText="true">
                      <font>
@@ -155,8 +155,16 @@
                   </ScrollPane>
                </children>
             </Pane>
-            <Pane prefHeight="200.0" prefWidth="200.0" visible="false" />
-            <Pane prefHeight="200.0" prefWidth="200.0" visible="false" />
+            <Pane fx:id="pnlOrders" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="117.0" layoutY="164.0" prefHeight="65.0" prefWidth="136.0" text="Orders" />
+               </children>
+            </Pane>
+            <Pane fx:id="pnlCustomers" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="47.0" prefWidth="136.0" text="Customers" />
+               </children>
+            </Pane>
          </children>
       </StackPane>
    </children>

@@ -1,9 +1,12 @@
 package controllers;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.control.Button;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 
 import java.io.IOException;
@@ -13,7 +16,25 @@ import java.util.ResourceBundle;
 public class Controller implements Initializable {
 
     @FXML
+    private Pane pnlOrders;
+
+    @FXML
+    private Button btnCustomers;
+
+    @FXML
+    private Pane pnlOverview;
+
+    @FXML
+    private Button btnOverview;
+
+    @FXML
     private VBox pnItems;
+
+    @FXML
+    private Button btnOrders;
+
+    @FXML
+    private Pane pnlCustomers;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -25,6 +46,24 @@ public class Controller implements Initializable {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+        }
+    }
+
+    public void handleClicks(ActionEvent actionEvent) {
+        if (actionEvent.getSource() == btnOverview) {
+            pnlOverview.setVisible(true);
+            pnlOrders.setVisible(false);
+            pnlCustomers.setVisible(false);
+        }
+        if (actionEvent.getSource() == btnOrders) {
+            pnlOverview.setVisible(false);
+            pnlOrders.setVisible(true);
+            pnlCustomers.setVisible(false);
+        }
+        if (actionEvent.getSource() == btnCustomers) {
+            pnlOverview.setVisible(false);
+            pnlOrders.setVisible(false);
+            pnlCustomers.setVisible(true);
         }
     }
 }
