@@ -16,7 +16,7 @@
       <VBox prefHeight="488.0" prefWidth="151.0" style="-fx-background-color: #bfff00;">
          <children>
             <ImageView fitHeight="88.0" fitWidth="152.0" pickOnBounds="true" preserveRatio="true" />
-            <Button alignment="BASELINE_LEFT" graphicTextGap="25.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="181.0" stylesheets="@../home/style.css" text="Overview">
+            <Button fx:id="btnOverview" alignment="BASELINE_LEFT" graphicTextGap="25.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="38.0" prefWidth="181.0" stylesheets="@style.css" text="Overview">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -28,7 +28,7 @@
                   <Insets left="20.0" />
                </padding>
             </Button>
-            <Button alignment="BASELINE_LEFT" graphicTextGap="25.0" mnemonicParsing="false" prefHeight="6.0" prefWidth="151.0" stylesheets="@../home/style.css" text="Orders">
+            <Button fx:id="btnOrders" alignment="BASELINE_LEFT" graphicTextGap="25.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="6.0" prefWidth="151.0" stylesheets="@style.css" text="Orders">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -40,7 +40,7 @@
                   <Insets left="20.0" />
                </padding>
             </Button>
-            <Button alignment="BASELINE_LEFT" graphicTextGap="25.0" mnemonicParsing="false" prefHeight="6.0" prefWidth="151.0" stylesheets="@../home/style.css" text="Customers">
+            <Button fx:id="btnCustomers" alignment="BASELINE_LEFT" graphicTextGap="25.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="6.0" prefWidth="151.0" stylesheets="@style.css" text="Customers">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -54,100 +54,118 @@
             </Button>
          </children>
       </VBox>
-      <Label layoutX="187.0" layoutY="31.0" prefHeight="65.0" prefWidth="179.0" style="-fx-background-color: #fff;" text="Orders" wrapText="true">
-         <font>
-            <Font size="43.0" />
-         </font>
-      </Label>
-      <HBox alignment="CENTER" layoutX="187.0" layoutY="184.0" prefHeight="30.0" prefWidth="532.0">
+      <StackPane layoutX="153.0" prefHeight="488.0" prefWidth="624.0">
          <children>
-            <Label alignment="CENTER" prefHeight="31.0" prefWidth="85.0" text="Company">
-               <HBox.margin>
-                  <Insets left="15.0" />
-               </HBox.margin>
-               <padding>
-                  <Insets left="10.0" />
-               </padding>
-            </Label>
-            <Label alignment="CENTER" prefHeight="31.0" prefWidth="85.0" text="Order ID">
-               <HBox.margin>
-                  <Insets left="15.0" />
-               </HBox.margin>
-               <padding>
-                  <Insets left="10.0" />
-               </padding>
-            </Label>
-            <Label alignment="CENTER" prefHeight="31.0" prefWidth="85.0" text="Price">
-               <HBox.margin>
-                  <Insets left="15.0" />
-               </HBox.margin>
-               <padding>
-                  <Insets left="10.0" />
-               </padding>
-            </Label>
-            <Label alignment="CENTER" prefHeight="31.0" prefWidth="85.0" text="Date">
-               <HBox.margin>
-                  <Insets left="15.0" />
-               </HBox.margin>
-               <padding>
-                  <Insets left="10.0" />
-               </padding>
-            </Label>
-            <Label alignment="CENTER" prefHeight="31.0" prefWidth="85.0">
-               <padding>
-                  <Insets left="10.0" />
-               </padding>
-            </Label>
+            <Pane fx:id="pnlOverview" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="46.0" layoutY="14.0" prefHeight="65.0" prefWidth="179.0" style="-fx-background-color: #fff;" text="Orders" wrapText="true">
+                     <font>
+                        <Font size="43.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" layoutX="46.0" layoutY="92.0" prefHeight="81.0" prefWidth="532.0" spacing="20.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="40.0" prefWidth="78.0" text="8888" textFill="#139abf">
+                                 <font>
+                                    <Font name="System Bold" size="27.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="40.0" prefWidth="78.0" text="Total Orders" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="40.0" prefWidth="78.0" text="8888" textFill="#b2bd13">
+                                 <font>
+                                    <Font name="System Bold" size="27.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="40.0" prefWidth="78.0" text="Total Orders" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="40.0" prefWidth="78.0" text="8888" textFill="#b613bd">
+                                 <font>
+                                    <Font name="System Bold" size="27.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="40.0" prefWidth="78.0" text="Total Orders" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="40.0" prefWidth="78.0" text="8888" textFill="#4813bd">
+                                 <font>
+                                    <Font name="System Bold" size="27.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="40.0" prefWidth="78.0" text="Total Orders" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="46.0" layoutY="182.0" prefHeight="30.0" prefWidth="532.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="31.0" prefWidth="85.0" text="Company">
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="31.0" prefWidth="85.0" text="Order ID">
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="31.0" prefWidth="85.0" text="Price">
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="31.0" prefWidth="85.0" text="Date">
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="31.0" prefWidth="85.0">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <ScrollPane layoutX="46.0" layoutY="218.0" prefHeight="250.0" prefWidth="553.0">
+                     <content>
+                        <VBox fx:id="pnItems" prefHeight="250.0" prefWidth="535.0" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </Pane>
+            <Pane fx:id="pnlOrders" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <Label layoutX="117.0" layoutY="164.0" prefHeight="65.0" prefWidth="136.0" text="Orders" />
+               </children>
+            </Pane>
+            <Pane fx:id="pnlCustomers" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <Label prefHeight="47.0" prefWidth="136.0" text="Customers" />
+               </children>
+            </Pane>
          </children>
-      </HBox>
-      <HBox alignment="CENTER" layoutX="178.0" layoutY="96.0" prefHeight="81.0" prefWidth="532.0" spacing="20.0">
-         <children>
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-               <children>
-                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="78.0" text="8888" textFill="#139abf">
-                     <font>
-                        <Font name="System Bold" size="27.0" />
-                     </font>
-                  </Label>
-                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="78.0" text="Total Orders" />
-               </children>
-            </VBox>
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-               <children>
-                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="78.0" text="8888" textFill="#b2bd13">
-                     <font>
-                        <Font name="System Bold" size="27.0" />
-                     </font>
-                  </Label>
-                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="78.0" text="Total Orders" />
-               </children>
-            </VBox>
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-               <children>
-                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="78.0" text="8888" textFill="#b613bd">
-                     <font>
-                        <Font name="System Bold" size="27.0" />
-                     </font>
-                  </Label>
-                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="78.0" text="Total Orders" />
-               </children>
-            </VBox>
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-               <children>
-                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="78.0" text="8888" textFill="#4813bd">
-                     <font>
-                        <Font name="System Bold" size="27.0" />
-                     </font>
-                  </Label>
-                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="78.0" text="Total Orders" />
-               </children>
-            </VBox>
-         </children>
-      </HBox>
-      <ScrollPane layoutX="188.0" layoutY="224.0" prefHeight="250.0" prefWidth="553.0">
-         <content>
-            <VBox fx:id="pnItems" prefHeight="250.0" prefWidth="535.0" />
-         </content>
-      </ScrollPane>
+      </StackPane>
    </children>
 </AnchorPane>

@@ -15,26 +15,28 @@ import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
 
-    @FXML
-    private Pane pnlOrders;
 
-    @FXML
-    private Button btnCustomers;
 
     @FXML
     private Pane pnlOverview;
 
     @FXML
-    private Button btnOverview;
+    private Pane pnlOrders;
+
+    @FXML
+    private Pane pnlCustomers;
 
     @FXML
     private VBox pnItems;
 
     @FXML
+    private Button btnOverview;
+
+    @FXML
     private Button btnOrders;
 
     @FXML
-    private Pane pnlCustomers;
+    private Button btnCustomers;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
