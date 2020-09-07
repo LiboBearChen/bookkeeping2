@@ -21,10 +21,22 @@ public class Controller implements Initializable {
     private Pane pnlOverview;
 
     @FXML
-    private Pane pnlOrders;
+    private Pane pnlInvoice;
 
     @FXML
-    private Pane pnlCustomers;
+    private Pane pnlInvoiceIn;
+
+    @FXML
+    private Pane pnlInvoiceOut;
+
+    @FXML
+    private Pane pnlStock;
+
+    @FXML
+    private Pane pnlStockIn;
+
+    @FXML
+    private Pane pnlStockOut;
 
     @FXML
     private VBox pnItems;
@@ -33,10 +45,22 @@ public class Controller implements Initializable {
     private Button btnOverview;
 
     @FXML
-    private Button btnOrders;
+    private Button btnInvoice;
 
     @FXML
-    private Button btnCustomers;
+    private Button btnInvoiceIn;
+
+    @FXML
+    private Button btnInvoiceOut;
+
+    @FXML
+    private Button btnStock;
+
+    @FXML
+    private Button btnStockIn;
+
+    @FXML
+    private Button btnStockOut;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -54,18 +78,66 @@ public class Controller implements Initializable {
     public void handleClicks(ActionEvent actionEvent) {
         if (actionEvent.getSource() == btnOverview) {
             pnlOverview.setVisible(true);
-            pnlOrders.setVisible(false);
-            pnlCustomers.setVisible(false);
+            pnlInvoice.setVisible(false);
+            pnlInvoiceIn.setVisible(false);
+            pnlInvoiceOut.setVisible(false);
+            pnlStock.setVisible(false);
+            pnlStockIn.setVisible(false);
+            pnlStockOut.setVisible(false);
         }
-        if (actionEvent.getSource() == btnOrders) {
+        if (actionEvent.getSource() == btnInvoice) {
             pnlOverview.setVisible(false);
-            pnlOrders.setVisible(true);
-            pnlCustomers.setVisible(false);
+            pnlInvoice.setVisible(true);
+            pnlInvoiceIn.setVisible(false);
+            pnlInvoiceOut.setVisible(false);
+            pnlStock.setVisible(false);
+            pnlStockIn.setVisible(false);
+            pnlStockOut.setVisible(false);
         }
-        if (actionEvent.getSource() == btnCustomers) {
+        if (actionEvent.getSource() == btnInvoiceIn) {
             pnlOverview.setVisible(false);
-            pnlOrders.setVisible(false);
-            pnlCustomers.setVisible(true);
+            pnlInvoice.setVisible(false);
+            pnlInvoiceIn.setVisible(true);
+            pnlInvoiceOut.setVisible(false);
+            pnlStock.setVisible(false);
+            pnlStockIn.setVisible(false);
+            pnlStockOut.setVisible(false);
+        }
+        if (actionEvent.getSource() == btnInvoiceOut) {
+            pnlOverview.setVisible(false);
+            pnlInvoice.setVisible(false);
+            pnlInvoiceIn.setVisible(false);
+            pnlInvoiceOut.setVisible(true);
+            pnlStock.setVisible(false);
+            pnlStockIn.setVisible(false);
+            pnlStockOut.setVisible(false);
+        }
+        if (actionEvent.getSource() == btnStock) {
+            pnlOverview.setVisible(false);
+            pnlInvoice.setVisible(false);
+            pnlInvoiceIn.setVisible(false);
+            pnlInvoiceOut.setVisible(false);
+            pnlStock.setVisible(true);
+            pnlStockIn.setVisible(false);
+            pnlStockOut.setVisible(false);
+        }
+        if (actionEvent.getSource() == btnStockIn) {
+            pnlOverview.setVisible(false);
+            pnlInvoice.setVisible(false);
+            pnlInvoiceIn.setVisible(false);
+            pnlInvoiceOut.setVisible(false);
+            pnlStock.setVisible(false);
+            pnlStockIn.setVisible(true);
+            pnlStockOut.setVisible(false);
+        }
+        if (actionEvent.getSource() == btnStockOut) {
+            pnlOverview.setVisible(false);
+            pnlInvoice.setVisible(false);
+            pnlInvoiceIn.setVisible(false);
+            pnlInvoiceOut.setVisible(false);
+            pnlStock.setVisible(false);
+            pnlStockIn.setVisible(false);
+            pnlStockOut.setVisible(true);
         }
     }
 }
