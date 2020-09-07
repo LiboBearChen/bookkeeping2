@@ -40,7 +40,7 @@
                   <Insets left="20.0" />
                </padding>
             </Button>
-            <Button fx:id="btnCustomers" alignment="BASELINE_LEFT" graphicTextGap="25.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="6.0" prefWidth="151.0" stylesheets="@style.css" text="Stock">
+            <Button fx:id="btnCustomers" alignment="BASELINE_LEFT" graphicTextGap="25.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="6.0" prefWidth="151.0" stylesheets="@style.css" text="InvoiceIn">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -52,7 +52,7 @@
                   <Insets left="20.0" />
                </padding>
             </Button>
-            <Button fx:id="btnCustomers1" alignment="BASELINE_LEFT" graphicTextGap="25.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="6.0" prefWidth="151.0" stylesheets="@style.css" text="Stock">
+            <Button fx:id="btnCustomers1" alignment="BASELINE_LEFT" graphicTextGap="25.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="6.0" prefWidth="151.0" stylesheets="@style.css" text="InvoiceOut">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -76,7 +76,19 @@
                   <Insets left="20.0" />
                </padding>
             </Button>
-            <Button fx:id="btnCustomers3" alignment="BASELINE_LEFT" graphicTextGap="25.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="6.0" prefWidth="151.0" stylesheets="@style.css" text="Stock">
+            <Button fx:id="btnCustomers3" alignment="BASELINE_LEFT" graphicTextGap="25.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="6.0" prefWidth="151.0" stylesheets="@style.css" text="StockIn">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/profile.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnCustomers31" alignment="BASELINE_LEFT" graphicTextGap="25.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="6.0" prefWidth="151.0" stylesheets="@style.css" text="StockOut">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -191,7 +203,7 @@
                   </ScrollPane>
                </children>
             </Pane>
-            <Pane fx:id="pnlOrders" prefHeight="200.0" prefWidth="200.0" visible="false">
+            <Pane fx:id="pnlInvoice" prefHeight="200.0" prefWidth="200.0" visible="false">
                <children>
                   <Label layoutX="50.0" layoutY="34.0" prefHeight="65.0" prefWidth="179.0" style="-fx-background-color: #fff;" text="Overview" wrapText="true">
                      <font>
@@ -231,7 +243,159 @@
                   <Button layoutX="256.0" layoutY="400.0" mnemonicParsing="false" text="Add" />
                </children>
             </Pane>
-            <Pane fx:id="pnlCustomers" prefHeight="200.0" prefWidth="200.0">
+            <Pane fx:id="pnlInvoiceIn" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <GridPane layoutX="56.0" layoutY="156.0" prefHeight="229.0" prefWidth="464.0">
+                     <children>
+                        <Label text="Company" />
+                        <ComboBox prefWidth="150.0" GridPane.columnIndex="1" />
+                        <Label text="Product" GridPane.rowIndex="1" />
+                        <Label text="Dimention" GridPane.rowIndex="2" />
+                        <TextField GridPane.columnIndex="2" />
+                        <ComboBox prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="Price" GridPane.rowIndex="3" />
+                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label text="TotalPrice" GridPane.rowIndex="4" />
+                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <Label layoutX="48.0" layoutY="53.0" prefHeight="65.0" prefWidth="179.0" style="-fx-background-color: #fff;" text="Stock" wrapText="true">
+                     <font>
+                        <Font size="43.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pnlInvoiceIn1" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <GridPane layoutX="56.0" layoutY="156.0" prefHeight="229.0" prefWidth="464.0">
+                     <children>
+                        <Label text="Company" />
+                        <ComboBox prefWidth="150.0" GridPane.columnIndex="1" />
+                        <Label text="Product" GridPane.rowIndex="1" />
+                        <Label text="Dimention" GridPane.rowIndex="2" />
+                        <TextField GridPane.columnIndex="2" />
+                        <ComboBox prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="Price" GridPane.rowIndex="3" />
+                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label text="TotalPrice" GridPane.rowIndex="4" />
+                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <Label layoutX="48.0" layoutY="53.0" prefHeight="65.0" prefWidth="179.0" style="-fx-background-color: #fff;" text="Stock" wrapText="true">
+                     <font>
+                        <Font size="43.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pnlInvoiceIn2" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <GridPane layoutX="56.0" layoutY="156.0" prefHeight="229.0" prefWidth="464.0">
+                     <children>
+                        <Label text="Company" />
+                        <ComboBox prefWidth="150.0" GridPane.columnIndex="1" />
+                        <Label text="Product" GridPane.rowIndex="1" />
+                        <Label text="Dimention" GridPane.rowIndex="2" />
+                        <TextField GridPane.columnIndex="2" />
+                        <ComboBox prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="Price" GridPane.rowIndex="3" />
+                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label text="TotalPrice" GridPane.rowIndex="4" />
+                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <Label layoutX="48.0" layoutY="53.0" prefHeight="65.0" prefWidth="179.0" style="-fx-background-color: #fff;" text="Stock" wrapText="true">
+                     <font>
+                        <Font size="43.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pnlInvoiceIn3" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <GridPane layoutX="56.0" layoutY="156.0" prefHeight="229.0" prefWidth="464.0">
+                     <children>
+                        <Label text="Company" />
+                        <ComboBox prefWidth="150.0" GridPane.columnIndex="1" />
+                        <Label text="Product" GridPane.rowIndex="1" />
+                        <Label text="Dimention" GridPane.rowIndex="2" />
+                        <TextField GridPane.columnIndex="2" />
+                        <ComboBox prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="Price" GridPane.rowIndex="3" />
+                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label text="TotalPrice" GridPane.rowIndex="4" />
+                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <Label layoutX="48.0" layoutY="53.0" prefHeight="65.0" prefWidth="179.0" style="-fx-background-color: #fff;" text="Stock" wrapText="true">
+                     <font>
+                        <Font size="43.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pnlInvoiceIn4" prefHeight="200.0" prefWidth="200.0">
                <children>
                   <GridPane layoutX="56.0" layoutY="156.0" prefHeight="229.0" prefWidth="464.0">
                      <children>
